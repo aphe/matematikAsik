@@ -1,0 +1,379 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FFDBC73A224936BC00A86352 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDBC739224936BC00A86352 /* AppDelegate.swift */; };
+		FFDBC73F224936BC00A86352 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFDBC73D224936BC00A86352 /* Main.storyboard */; };
+		FFDBC744224936BD00A86352 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFDBC742224936BD00A86352 /* LaunchScreen.storyboard */; };
+		FFDBC753224936DE00A86352 /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDBC74D224936DE00A86352 /* Main.swift */; };
+		FFDBC754224936DE00A86352 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFDBC74E224936DE00A86352 /* Assets.xcassets */; };
+		FFDBC756224936DE00A86352 /* FormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDBC750224936DE00A86352 /* FormViewController.swift */; };
+		FFDBC7612249378D00A86352 /* CalculateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFDBC75F2249378D00A86352 /* CalculateViewController.xib */; };
+		FFDBC7622249378D00A86352 /* CalculateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDBC7602249378D00A86352 /* CalculateViewController.swift */; };
+		FFDBC76A224938DF00A86352 /* ResultCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDBC768224938DF00A86352 /* ResultCollectionViewController.swift */; };
+		FFDBC76B224938DF00A86352 /* ResultCollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFDBC769224938DF00A86352 /* ResultCollectionViewController.xib */; };
+		FFDBC76E2249392900A86352 /* ResultCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDBC76C2249392900A86352 /* ResultCollectionViewCell.swift */; };
+		FFDBC76F2249392900A86352 /* ResultCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFDBC76D2249392900A86352 /* ResultCollectionViewCell.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		FFDBC736224936BC00A86352 /* MatematikAsik.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MatematikAsik.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FFDBC739224936BC00A86352 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FFDBC73E224936BC00A86352 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FFDBC743224936BD00A86352 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FFDBC745224936BD00A86352 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FFDBC74D224936DE00A86352 /* Main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
+		FFDBC74E224936DE00A86352 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../MatematikaAsik/MatematikaAsik/Assets.xcassets; sourceTree = "<group>"; };
+		FFDBC750224936DE00A86352 /* FormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormViewController.swift; sourceTree = "<group>"; };
+		FFDBC75F2249378D00A86352 /* CalculateViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CalculateViewController.xib; sourceTree = "<group>"; };
+		FFDBC7602249378D00A86352 /* CalculateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculateViewController.swift; sourceTree = "<group>"; };
+		FFDBC768224938DF00A86352 /* ResultCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultCollectionViewController.swift; sourceTree = "<group>"; };
+		FFDBC769224938DF00A86352 /* ResultCollectionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultCollectionViewController.xib; sourceTree = "<group>"; };
+		FFDBC76C2249392900A86352 /* ResultCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultCollectionViewCell.swift; sourceTree = "<group>"; };
+		FFDBC76D2249392900A86352 /* ResultCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultCollectionViewCell.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FFDBC733224936BC00A86352 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FFDBC72D224936BC00A86352 = {
+			isa = PBXGroup;
+			children = (
+				FFDBC738224936BC00A86352 /* MatematikAsik */,
+				FFDBC737224936BC00A86352 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FFDBC737224936BC00A86352 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FFDBC736224936BC00A86352 /* MatematikAsik.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FFDBC738224936BC00A86352 /* MatematikAsik */ = {
+			isa = PBXGroup;
+			children = (
+				FFDBC739224936BC00A86352 /* AppDelegate.swift */,
+				FFDBC750224936DE00A86352 /* FormViewController.swift */,
+				FFDBC7632249379400A86352 /* Calculate */,
+				FFDBC74D224936DE00A86352 /* Main.swift */,
+				FFDBC73D224936BC00A86352 /* Main.storyboard */,
+				FFDBC742224936BD00A86352 /* LaunchScreen.storyboard */,
+				FFDBC74E224936DE00A86352 /* Assets.xcassets */,
+				FFDBC745224936BD00A86352 /* Info.plist */,
+			);
+			path = MatematikAsik;
+			sourceTree = "<group>";
+		};
+		FFDBC7632249379400A86352 /* Calculate */ = {
+			isa = PBXGroup;
+			children = (
+				FFDBC7602249378D00A86352 /* CalculateViewController.swift */,
+				FFDBC75F2249378D00A86352 /* CalculateViewController.xib */,
+				FFDBC768224938DF00A86352 /* ResultCollectionViewController.swift */,
+				FFDBC769224938DF00A86352 /* ResultCollectionViewController.xib */,
+				FFDBC76C2249392900A86352 /* ResultCollectionViewCell.swift */,
+				FFDBC76D2249392900A86352 /* ResultCollectionViewCell.xib */,
+			);
+			path = Calculate;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FFDBC735224936BC00A86352 /* MatematikAsik */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FFDBC748224936BD00A86352 /* Build configuration list for PBXNativeTarget "MatematikAsik" */;
+			buildPhases = (
+				FFDBC732224936BC00A86352 /* Sources */,
+				FFDBC733224936BC00A86352 /* Frameworks */,
+				FFDBC734224936BC00A86352 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MatematikAsik;
+			productName = MatematikAsik;
+			productReference = FFDBC736224936BC00A86352 /* MatematikAsik.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FFDBC72E224936BC00A86352 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Afriyandi Setiawan";
+				TargetAttributes = {
+					FFDBC735224936BC00A86352 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+				};
+			};
+			buildConfigurationList = FFDBC731224936BC00A86352 /* Build configuration list for PBXProject "MatematikAsik" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FFDBC72D224936BC00A86352;
+			productRefGroup = FFDBC737224936BC00A86352 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FFDBC735224936BC00A86352 /* MatematikAsik */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FFDBC734224936BC00A86352 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FFDBC744224936BD00A86352 /* LaunchScreen.storyboard in Resources */,
+				FFDBC76F2249392900A86352 /* ResultCollectionViewCell.xib in Resources */,
+				FFDBC73F224936BC00A86352 /* Main.storyboard in Resources */,
+				FFDBC76B224938DF00A86352 /* ResultCollectionViewController.xib in Resources */,
+				FFDBC754224936DE00A86352 /* Assets.xcassets in Resources */,
+				FFDBC7612249378D00A86352 /* CalculateViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FFDBC732224936BC00A86352 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FFDBC76A224938DF00A86352 /* ResultCollectionViewController.swift in Sources */,
+				FFDBC76E2249392900A86352 /* ResultCollectionViewCell.swift in Sources */,
+				FFDBC753224936DE00A86352 /* Main.swift in Sources */,
+				FFDBC756224936DE00A86352 /* FormViewController.swift in Sources */,
+				FFDBC73A224936BC00A86352 /* AppDelegate.swift in Sources */,
+				FFDBC7622249378D00A86352 /* CalculateViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		FFDBC73D224936BC00A86352 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FFDBC73E224936BC00A86352 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FFDBC742224936BD00A86352 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FFDBC743224936BD00A86352 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FFDBC746224936BD00A86352 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FFDBC747224936BD00A86352 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FFDBC749224936BD00A86352 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R5XN3DS3TD;
+				INFOPLIST_FILE = MatematikAsik/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = phe.at.work.MatematikAsik;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FFDBC74A224936BD00A86352 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R5XN3DS3TD;
+				INFOPLIST_FILE = MatematikAsik/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = phe.at.work.MatematikAsik;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FFDBC731224936BC00A86352 /* Build configuration list for PBXProject "MatematikAsik" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FFDBC746224936BD00A86352 /* Debug */,
+				FFDBC747224936BD00A86352 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FFDBC748224936BD00A86352 /* Build configuration list for PBXNativeTarget "MatematikAsik" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FFDBC749224936BD00A86352 /* Debug */,
+				FFDBC74A224936BD00A86352 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FFDBC72E224936BC00A86352 /* Project object */;
+}
