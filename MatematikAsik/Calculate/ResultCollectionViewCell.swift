@@ -11,7 +11,6 @@ import UIKit
 class ResultCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var cellNumber: UILabel!
-    var number:String?
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -19,7 +18,12 @@ class ResultCollectionViewCell: UICollectionViewCell {
     
     override func willMove(toSuperview newSuperview: UIView?) {
         super.willMove(toSuperview: newSuperview)
-        cellNumber.text = number
+        self.layer.cornerRadius = 4
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        cellNumber.text = ""
     }
 
 }

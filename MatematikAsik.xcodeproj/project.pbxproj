@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FFAA59972249CEEC00B6B415 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFAA59962249CEEC00B6B415 /* Assets.xcassets */; };
 		FFDBC73A224936BC00A86352 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDBC739224936BC00A86352 /* AppDelegate.swift */; };
 		FFDBC73F224936BC00A86352 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFDBC73D224936BC00A86352 /* Main.storyboard */; };
 		FFDBC744224936BD00A86352 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFDBC742224936BD00A86352 /* LaunchScreen.storyboard */; };
 		FFDBC753224936DE00A86352 /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDBC74D224936DE00A86352 /* Main.swift */; };
-		FFDBC754224936DE00A86352 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFDBC74E224936DE00A86352 /* Assets.xcassets */; };
 		FFDBC756224936DE00A86352 /* FormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDBC750224936DE00A86352 /* FormViewController.swift */; };
 		FFDBC7612249378D00A86352 /* CalculateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFDBC75F2249378D00A86352 /* CalculateViewController.xib */; };
 		FFDBC7622249378D00A86352 /* CalculateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDBC7602249378D00A86352 /* CalculateViewController.swift */; };
@@ -22,13 +22,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FFAA59962249CEEC00B6B415 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FFDBC736224936BC00A86352 /* MatematikAsik.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MatematikAsik.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFDBC739224936BC00A86352 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FFDBC73E224936BC00A86352 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FFDBC743224936BD00A86352 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FFDBC745224936BD00A86352 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FFDBC74D224936DE00A86352 /* Main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
-		FFDBC74E224936DE00A86352 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../MatematikaAsik/MatematikaAsik/Assets.xcassets; sourceTree = "<group>"; };
 		FFDBC750224936DE00A86352 /* FormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormViewController.swift; sourceTree = "<group>"; };
 		FFDBC75F2249378D00A86352 /* CalculateViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CalculateViewController.xib; sourceTree = "<group>"; };
 		FFDBC7602249378D00A86352 /* CalculateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculateViewController.swift; sourceTree = "<group>"; };
@@ -74,7 +74,7 @@
 				FFDBC74D224936DE00A86352 /* Main.swift */,
 				FFDBC73D224936BC00A86352 /* Main.storyboard */,
 				FFDBC742224936BD00A86352 /* LaunchScreen.storyboard */,
-				FFDBC74E224936DE00A86352 /* Assets.xcassets */,
+				FFAA59962249CEEC00B6B415 /* Assets.xcassets */,
 				FFDBC745224936BD00A86352 /* Info.plist */,
 			);
 			path = MatematikAsik;
@@ -155,7 +155,7 @@
 				FFDBC76F2249392900A86352 /* ResultCollectionViewCell.xib in Resources */,
 				FFDBC73F224936BC00A86352 /* Main.storyboard in Resources */,
 				FFDBC76B224938DF00A86352 /* ResultCollectionViewController.xib in Resources */,
-				FFDBC754224936DE00A86352 /* Assets.xcassets in Resources */,
+				FFAA59972249CEEC00B6B415 /* Assets.xcassets in Resources */,
 				FFDBC7612249378D00A86352 /* CalculateViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -319,7 +319,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = R5XN3DS3TD;
+				DEVELOPMENT_TEAM = M2H9FPHH55;
 				INFOPLIST_FILE = MatematikAsik/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -338,7 +338,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = R5XN3DS3TD;
+				DEVELOPMENT_TEAM = M2H9FPHH55;
 				INFOPLIST_FILE = MatematikAsik/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (

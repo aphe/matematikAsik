@@ -18,7 +18,7 @@ class CalculateViewController: FormViewController {
     
     lazy var collectionLayout: UICollectionViewFlowLayout = {
         let layout = UICollectionViewFlowLayout()
-        let width = UIScreen.main.bounds.size.width
+        let width = UIScreen.main.bounds.size.width / 5
         layout.estimatedItemSize = CGSize(width: width, height: 50)
         return layout
     }()
@@ -79,9 +79,13 @@ class CalculateViewController: FormViewController {
     }
     
     func findFibonacci() {
-        guard let current = currentNumber else {
+        guard let current = currentNumber, current < 93 else {
+            showToast(withMessage: "number is not valid\ndue to limitation of int size, the maximum number is 92")
             return
         }
+        self.showSpinner()
+        let doGroup = DispatchGroup()
+        doGroup.enter()
         func dFib(_ n: Int64) -> [Int64] {
             var a:Int64 = 0, b:Int64 = 1, fib = [a]
             guard n > 1 else {
@@ -91,20 +95,60 @@ class CalculateViewController: FormViewController {
                 (a, b) = (a + b, a)
                 fib.append(a)
             }
-            return fib
+            let sorted = fib.sorted { (next, previous) -> Bool in
+                next < previous
+            }
+            doGroup.leave()
+            return sorted
         }
-        let vc = ResultCollectionViewController(collectionViewLayout: collectionLayout)
-        vc.hidesBottomBarWhenPushed = true
-        vc.data = dFib(Int64(current)).sorted()
-        self.navigationController?.pushViewController(vc, animated: true)
+        let data = dFib(Int64(current))
+        doGroup.notify(queue: .main) {
+            let vc = ResultCollectionViewController(collectionViewLayout: self.collectionLayout)
+            vc.hidesBottomBarWhenPushed = true
+            vc.data = data
+            self.hideSpinner()
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
     }
     
     func findPrimeNumber() {
+        guard let current = currentNumber, current <= 250000 else {
+            showToast(withMessage: "please input your number\ndue to limitation of computing, the maximum number is 250.000")
+            return
+        }
+        self.showSpinner()
+        let doGroup = DispatchGroup()
+        doGroup.enter()
+        func generatePrimes(to n: Int64) -> [Int64] {
+            if n <= 5 {
+                return [2, 3, 5].filter { $0 <= n }
+            }
+            var arr = Array(stride(from: 3, through: n, by: 2))
+            let squareRootN = Int(Double(n).squareRoot())
+            for index in 0... {
+                if arr[index] > squareRootN { break }
+                let num = arr.remove(at: index)
+                arr = arr.filter { $0 % num != 0 }
+                arr.insert(num, at: index)
+            }
+            arr.insert(2, at: 0)
+            doGroup.leave()
+            return arr
+        }
+        let data = generatePrimes(to: Int64(current))
+        doGroup.notify(queue: .main) {
+            let vc = ResultCollectionViewController(collectionViewLayout: self.collectionLayout)
+            vc.hidesBottomBarWhenPushed = true
+            vc.data = data
+            self.hideSpinner()
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
     }
     
     func addOrMultiplyOp() {
         func insertNextNumber() {
             guard let current = currentNumber else {
+                showToast(withMessage: "please input your number")
                 return
             }
             let vc = CalculateViewController()
@@ -118,6 +162,7 @@ class CalculateViewController: FormViewController {
         }
         func calculate() {
             guard let previous = previousNumber, let current = currentNumber else {
+                showToast(withMessage: "please input your number")
                 return
             }
             var result = 0

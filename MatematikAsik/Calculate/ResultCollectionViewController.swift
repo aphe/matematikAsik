@@ -42,8 +42,13 @@ class ResultCollectionViewController: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as? ResultCollectionViewCell
         cell?.backgroundColor = .random
-        cell?.number = data?[indexPath.row].commaRepresentation
+        cell?.cellNumber.text = data?[indexPath.row].commaRepresentation
         return cell ?? UICollectionViewCell()
     }
+}
 
+extension ResultCollectionViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: (data?[indexPath.row].commaRepresentation.count ?? 0) * 20, height: 50)
+    }
 }
