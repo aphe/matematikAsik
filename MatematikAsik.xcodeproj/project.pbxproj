@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		FFAA59972249CEEC00B6B415 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFAA59962249CEEC00B6B415 /* Assets.xcassets */; };
+		FFCE03AF224BD5120083B3D5 /* MatematikAsikTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCE03AE224BD5120083B3D5 /* MatematikAsikTests.swift */; };
+		FFCE03B7224BD60A0083B3D5 /* UIKitExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCE03B6224BD60A0083B3D5 /* UIKitExtension.swift */; };
 		FFDBC73A224936BC00A86352 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDBC739224936BC00A86352 /* AppDelegate.swift */; };
 		FFDBC73F224936BC00A86352 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFDBC73D224936BC00A86352 /* Main.storyboard */; };
 		FFDBC744224936BD00A86352 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFDBC742224936BD00A86352 /* LaunchScreen.storyboard */; };
@@ -21,8 +23,22 @@
 		FFDBC76F2249392900A86352 /* ResultCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFDBC76D2249392900A86352 /* ResultCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		FFCE03B1224BD5120083B3D5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FFDBC72E224936BC00A86352 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FFDBC735224936BC00A86352;
+			remoteInfo = MatematikAsik;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		FFAA59962249CEEC00B6B415 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FFCE03AC224BD5120083B3D5 /* MatematikAsikTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MatematikAsikTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FFCE03AE224BD5120083B3D5 /* MatematikAsikTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatematikAsikTests.swift; sourceTree = "<group>"; };
+		FFCE03B0224BD5120083B3D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FFCE03B6224BD60A0083B3D5 /* UIKitExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitExtension.swift; sourceTree = "<group>"; };
 		FFDBC736224936BC00A86352 /* MatematikAsik.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MatematikAsik.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFDBC739224936BC00A86352 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FFDBC73E224936BC00A86352 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -39,6 +55,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		FFCE03A9224BD5120083B3D5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FFDBC733224936BC00A86352 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -49,10 +72,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FFCE03AD224BD5120083B3D5 /* MatematikAsikTests */ = {
+			isa = PBXGroup;
+			children = (
+				FFCE03AE224BD5120083B3D5 /* MatematikAsikTests.swift */,
+				FFCE03B0224BD5120083B3D5 /* Info.plist */,
+			);
+			path = MatematikAsikTests;
+			sourceTree = "<group>";
+		};
 		FFDBC72D224936BC00A86352 = {
 			isa = PBXGroup;
 			children = (
 				FFDBC738224936BC00A86352 /* MatematikAsik */,
+				FFCE03AD224BD5120083B3D5 /* MatematikAsikTests */,
 				FFDBC737224936BC00A86352 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -61,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				FFDBC736224936BC00A86352 /* MatematikAsik.app */,
+				FFCE03AC224BD5120083B3D5 /* MatematikAsikTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -76,6 +110,7 @@
 				FFDBC742224936BD00A86352 /* LaunchScreen.storyboard */,
 				FFAA59962249CEEC00B6B415 /* Assets.xcassets */,
 				FFDBC745224936BD00A86352 /* Info.plist */,
+				FFCE03B6224BD60A0083B3D5 /* UIKitExtension.swift */,
 			);
 			path = MatematikAsik;
 			sourceTree = "<group>";
@@ -96,6 +131,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		FFCE03AB224BD5120083B3D5 /* MatematikAsikTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FFCE03B5224BD5120083B3D5 /* Build configuration list for PBXNativeTarget "MatematikAsikTests" */;
+			buildPhases = (
+				FFCE03A8224BD5120083B3D5 /* Sources */,
+				FFCE03A9224BD5120083B3D5 /* Frameworks */,
+				FFCE03AA224BD5120083B3D5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FFCE03B2224BD5120083B3D5 /* PBXTargetDependency */,
+			);
+			name = MatematikAsikTests;
+			productName = MatematikAsikTests;
+			productReference = FFCE03AC224BD5120083B3D5 /* MatematikAsikTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		FFDBC735224936BC00A86352 /* MatematikAsik */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = FFDBC748224936BD00A86352 /* Build configuration list for PBXNativeTarget "MatematikAsik" */;
@@ -123,6 +176,10 @@
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Afriyandi Setiawan";
 				TargetAttributes = {
+					FFCE03AB224BD5120083B3D5 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = FFDBC735224936BC00A86352;
+					};
 					FFDBC735224936BC00A86352 = {
 						CreatedOnToolsVersion = 10.1;
 					};
@@ -142,11 +199,19 @@
 			projectRoot = "";
 			targets = (
 				FFDBC735224936BC00A86352 /* MatematikAsik */,
+				FFCE03AB224BD5120083B3D5 /* MatematikAsikTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		FFCE03AA224BD5120083B3D5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FFDBC734224936BC00A86352 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -163,10 +228,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		FFCE03A8224BD5120083B3D5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FFCE03AF224BD5120083B3D5 /* MatematikAsikTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FFDBC732224936BC00A86352 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFCE03B7224BD60A0083B3D5 /* UIKitExtension.swift in Sources */,
 				FFDBC76A224938DF00A86352 /* ResultCollectionViewController.swift in Sources */,
 				FFDBC76E2249392900A86352 /* ResultCollectionViewCell.swift in Sources */,
 				FFDBC753224936DE00A86352 /* Main.swift in Sources */,
@@ -177,6 +251,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FFCE03B2224BD5120083B3D5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FFDBC735224936BC00A86352 /* MatematikAsik */;
+			targetProxy = FFCE03B1224BD5120083B3D5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		FFDBC73D224936BC00A86352 /* Main.storyboard */ = {
@@ -198,6 +280,46 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		FFCE03B3224BD5120083B3D5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = S4NA9JEE2R;
+				INFOPLIST_FILE = MatematikAsikTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = phe.at.work.MatematikAsikTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MatematikAsik.app/MatematikAsik";
+			};
+			name = Debug;
+		};
+		FFCE03B4224BD5120083B3D5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = S4NA9JEE2R;
+				INFOPLIST_FILE = MatematikAsikTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = phe.at.work.MatematikAsikTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MatematikAsik.app/MatematikAsik";
+			};
+			name = Release;
+		};
 		FFDBC746224936BD00A86352 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -355,6 +477,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		FFCE03B5224BD5120083B3D5 /* Build configuration list for PBXNativeTarget "MatematikAsikTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FFCE03B3224BD5120083B3D5 /* Debug */,
+				FFCE03B4224BD5120083B3D5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		FFDBC731224936BC00A86352 /* Build configuration list for PBXProject "MatematikAsik" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

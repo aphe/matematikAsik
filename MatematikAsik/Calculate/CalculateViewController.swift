@@ -11,8 +11,8 @@ import UIKit
 class CalculateViewController: FormViewController {
 
     @IBOutlet weak var nextButton: UIButton!
-    private var currentNumber: Int?
-    private var previousNumber: Int?
+    internal var currentNumber: Int?
+    internal var previousNumber: Int?
     var operationType: OperationType = .add
     var pageTitle: String = "Input The First Number"
     
@@ -84,31 +84,42 @@ class CalculateViewController: FormViewController {
             return
         }
         self.showSpinner()
-        let doGroup = DispatchGroup()
-        doGroup.enter()
-        func dFib(_ n: Int64) -> [Int64] {
-            var a:Int64 = 0, b:Int64 = 1, fib = [a]
-            guard n > 1 else {
-                return [a]
-            }
-            (2...n).forEach { _ in
-                (a, b) = (a + b, a)
-                fib.append(a)
-            }
-            let sorted = fib.sorted { (next, previous) -> Bool in
-                next < previous
-            }
-            doGroup.leave()
-            return sorted
-        }
-        let data = dFib(Int64(current))
-        doGroup.notify(queue: .main) {
-            let vc = ResultCollectionViewController(collectionViewLayout: self.collectionLayout)
-            vc.hidesBottomBarWhenPushed = true
-            vc.data = data
+        let vc = ResultCollectionViewController(collectionViewLayout: self.collectionLayout)
+        vc.hidesBottomBarWhenPushed = true
+        vc.data = dFib(Int64(current))
+        self.navigationController?.pushViewController(vc, animated: true) {
             self.hideSpinner()
-            self.navigationController?.pushViewController(vc, animated: true)
         }
+    }
+    
+    func dFib(_ n: Int64) -> [Int64] {
+        var a:Int64 = 0, b:Int64 = 1, fib = [a]
+        guard n > 1 else {
+            return [a]
+        }
+        (2...n + 1).forEach { _ in
+            (a, b) = (a + b, a)
+            fib.append(a)
+        }
+        return fib.sorted { (next, previous) -> Bool in
+            next < previous
+        }
+    }
+    
+    func generatePrimes(to n: Int64) -> [Int64] {
+        if n <= 5 {
+            return [2, 3, 5].filter { $0 <= n }
+        }
+        var arr = Array(stride(from: 3, through: n, by: 2))
+        let squareRootN = Int(Double(n).squareRoot())
+        for index in 0... {
+            if arr[index] > squareRootN { break }
+            let num = arr.remove(at: index)
+            arr = arr.filter { $0 % num != 0 }
+            arr.insert(num, at: index)
+        }
+        arr.insert(2, at: 0)
+        return arr
     }
     
     func findPrimeNumber() {
@@ -117,31 +128,11 @@ class CalculateViewController: FormViewController {
             return
         }
         self.showSpinner()
-        let doGroup = DispatchGroup()
-        doGroup.enter()
-        func generatePrimes(to n: Int64) -> [Int64] {
-            if n <= 5 {
-                return [2, 3, 5].filter { $0 <= n }
-            }
-            var arr = Array(stride(from: 3, through: n, by: 2))
-            let squareRootN = Int(Double(n).squareRoot())
-            for index in 0... {
-                if arr[index] > squareRootN { break }
-                let num = arr.remove(at: index)
-                arr = arr.filter { $0 % num != 0 }
-                arr.insert(num, at: index)
-            }
-            arr.insert(2, at: 0)
-            doGroup.leave()
-            return arr
-        }
-        let data = generatePrimes(to: Int64(current))
-        doGroup.notify(queue: .main) {
-            let vc = ResultCollectionViewController(collectionViewLayout: self.collectionLayout)
-            vc.hidesBottomBarWhenPushed = true
-            vc.data = data
+        let vc = ResultCollectionViewController(collectionViewLayout: self.collectionLayout)
+        vc.hidesBottomBarWhenPushed = true
+        vc.data = generatePrimes(to: Int64(current))
+        self.navigationController?.pushViewController(vc, animated: true) {
             self.hideSpinner()
-            self.navigationController?.pushViewController(vc, animated: true)
         }
     }
     
@@ -160,20 +151,13 @@ class CalculateViewController: FormViewController {
             vc.nextButton.setTitleColor(vc.nextButton.titleColor(for: .normal), for: .normal)
             self.navigationController?.pushViewController(vc, animated: true)
         }
+        
         func calculate() {
             guard let previous = previousNumber, let current = currentNumber else {
                 showToast(withMessage: "please input your number")
                 return
             }
-            var result = 0
-            switch operationType {
-            case .add:
-                result = previous + current
-            case .multiply:
-                result = previous * current
-            default:
-                break
-            }
+            let result = addOrMultiply(previous, current, operation: operationType)
             let alert = UIAlertController(title: "Result", message: result.commaRepresentation, preferredStyle: .alert)
             let okButton = UIAlertAction(title: "Nice", style: .default) { _ in
                 self.navigationController?.popToRootViewController(animated: true)
@@ -182,6 +166,17 @@ class CalculateViewController: FormViewController {
             self.present(alert, animated: true) {}
         }
         previousNumber == nil ? insertNextNumber() : calculate()
+    }
+    
+    func addOrMultiply(_ first: Int,_ second: Int, operation: OperationType) -> Int {
+        switch operation {
+        case .add:
+            return first + second
+        case .multiply:
+            return first * second
+        default:
+            fatalError()
+        }
     }
     
 }
