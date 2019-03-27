@@ -9,7 +9,7 @@
 import UIKit
 
 class CalculateViewController: FormViewController {
-
+    
     @IBOutlet weak var nextButton: UIButton!
     internal var currentNumber: Int?
     internal var previousNumber: Int?
@@ -75,7 +75,7 @@ class CalculateViewController: FormViewController {
         case .findPrimeNumber:
             findPrimeNumber()
         }
-
+        
     }
     
     func findFibonacci() {
@@ -97,7 +97,7 @@ class CalculateViewController: FormViewController {
         guard n > 1 else {
             return [a]
         }
-        (2...n + 1).forEach { _ in
+        (2...n).forEach { _ in
             (a, b) = (a + b, a)
             fib.append(a)
         }
@@ -106,25 +106,35 @@ class CalculateViewController: FormViewController {
         }
     }
     
-    func generatePrimes(to n: Int64) -> [Int64] {
-        if n <= 5 {
-            return [2, 3, 5].filter { $0 <= n }
+    func generatePrimes(to limit: Int64) -> [Int64] {
+        let start = Int64(2)
+        var prime = Array<Int64>()
+        var isPrime = true
+        for i in start... {
+            isPrime = true
+            let squareRootN = Int64(Double(i).squareRoot())
+            if squareRootN >= start {
+                for j in start...squareRootN {
+                    if i % j == 0 {
+                        isPrime = false
+                        break
+                    }
+                }
+            }
+            if isPrime {
+                prime.append(i)
+                if prime.count == limit {
+                    break
+                }
+            }
+            
         }
-        var arr = Array(stride(from: 3, through: n, by: 2))
-        let squareRootN = Int(Double(n).squareRoot())
-        for index in 0... {
-            if arr[index] > squareRootN { break }
-            let num = arr.remove(at: index)
-            arr = arr.filter { $0 % num != 0 }
-            arr.insert(num, at: index)
-        }
-        arr.insert(2, at: 0)
-        return arr
+        return prime
     }
     
     func findPrimeNumber() {
-        guard let current = currentNumber, current <= 250000 else {
-            showToast(withMessage: "please input your number\ndue to limitation of computing, the maximum number is 250.000")
+        guard let current = currentNumber, current <= 1000 else {
+            showToast(withMessage: "please input your number\ndue to limitation of computing, the maximum number is 1000")
             return
         }
         self.showSpinner()

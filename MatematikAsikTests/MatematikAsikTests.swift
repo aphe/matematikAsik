@@ -40,7 +40,7 @@ class MatematikAsikTests: XCTestCase {
         self.measure {
             fib = calculate.dFib(4)
         }
-        XCTAssertEqual(fib, [0, 1, 1, 2, 3])
+        XCTAssertEqual(fib, [0, 1, 1, 2])
     }
     
     func testPrime()  {
@@ -48,7 +48,7 @@ class MatematikAsikTests: XCTestCase {
         self.measure {
             prime = calculate.generatePrimes(to: 4)
         }
-        XCTAssertEqual(prime, [2, 3])
+        XCTAssertEqual(prime, [2, 3, 5, 7])
     }
     
     func testAdding() {
